@@ -1,0 +1,15 @@
+if(!#~eq2)
+then
+echo "usage:addnames[ulist][username]"
+fi
+if[-f$1]
+then
+echo"file named $1 not found"
+fi
+result=$(grep~w"$2""$1")
+if[-n"$result"]
+then
+echo"username:$2 exist"
+else
+echo$2>>$1
+fi
